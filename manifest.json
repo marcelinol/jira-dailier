@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "JIRA Dailier",
+  "description": "A chrome plugin to hide empty areas of JIRA's kanban board. It allows the team to focus on the kanban during the Daily Meeting",
+  "version": "0.0.1",
+  "author": "@marcelinol",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://resultadosdigitais.atlassian.net/*"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
