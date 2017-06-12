@@ -6,6 +6,9 @@ chrome.runtime.onMessage.addListener(
 
       toggleVisibility(header);
       toggleVisibility(navbar);
+
+      adjustHeightForWindow(document.getElementById('ghx-plan'));
+      adjustHeightForWindow(document.getElementById('ghx-plan-group'));
     }
   }
 );
@@ -17,3 +20,8 @@ var toggleVisibility = function(element) {
     element.style.display = 'none';
   }
 }
+
+var adjustHeightForWindow = function(element) {
+  element.style.height = window.innerHeight + "px";
+}
+
